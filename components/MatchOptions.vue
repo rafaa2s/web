@@ -386,7 +386,33 @@ import FiveStackToolTip from "./FiveStackToolTip.vue";
                     </FormLabel>
 
                     <FormControl>
-                      <Popover>
+                      <template v-if="form.values.lan">
+                          <Select
+                            v-model="lan_region"
+                            :options="regions"
+                            option-label="description"
+                            option-value="value"
+                            class="w-full"
+                          >
+                            <FormControl>
+                              <SelectTrigger>
+                                <SelectValue placeholder="Select LAN Region" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectGroup>
+                                <SelectItem
+                                  v-for="region in regions"
+                                  :key="region.value"
+                                  :value="region.value"
+                                >
+                                  {{ region.description }}
+                                </SelectItem>
+                              </SelectGroup>
+                            </SelectContent>
+                          </Select>
+                      </template>
+                      <Popover v-else>
                         <PopoverTrigger as-child>
                           <Button
                             variant="outline"
@@ -691,6 +717,7 @@ export default {
   },
   data() {
     return {
+      lan_region: null,
       showAdvancedSettings: false,
     };
   },
@@ -709,11 +736,20 @@ export default {
         this.form.setFieldValue("map_pool_id", this.defaultMapPool.id);
       },
     },
+    lan_region : {
+      handler(lan_region) {
+        if(this.form.values.lan) {
+          this.form.setFieldValue("regions", [lan_region]);
+        }
+      },
+    },
     ["form.values.lan"]: {
       handler(lan) {
         let regions: string[] = [];
         if (lan && this.regions?.length > 0) {
-          regions = [this.regions.at(0)?.value];
+          const lanRegion = this.regions.find((region) => region.is_lan === true);
+          regions = [lanRegion?.value];
+          this.lan_region = lanRegion?.value;
         }
 
         this.form.setFieldValue("regions", regions);
