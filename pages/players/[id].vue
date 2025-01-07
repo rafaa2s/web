@@ -32,7 +32,7 @@ import PlayerChangeName from "~/components/PlayerChangeName.vue";
 
       <template #actions>
         <div class="flex gap-2">
-          <template v-if="player.steam_id !== me.steam_id">
+          <template v-if="player.steam_id !== me.steam_id && !isUser">
             <SanctionPlayer :player="player" />
           </template>
 
@@ -329,6 +329,9 @@ export default {
     },
     isAdmin() {
       return useAuthStore().isAdmin;
+    },
+    isUser() {
+      return useAuthStore().isUser;
     },
     kd() {
       if (this.player?.deaths_aggregate.aggregate.count === 0) {
