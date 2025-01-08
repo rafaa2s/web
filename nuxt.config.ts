@@ -11,7 +11,6 @@ const url = `https://5stack.gg`;
 
 export default defineNuxtConfig({
   ssr: false,
-  plugins: ["~/plugins/preloader.client.ts"],
 
   app: {
     head: {
@@ -32,6 +31,44 @@ export default defineNuxtConfig({
 
         { property: "og:url", content: url },
         { property: "og:image", content: `${url}/_ipx/_/favicon/512.png` },
+      ],
+      bodyAttrs: {
+        class: 'pre-loader',
+      },
+      style: [
+        {
+          innerHTML: `
+            .pre-loader::before {
+              content: '';
+              position: absolute;
+              border: 4px solid rgba(255, 255, 255, 0.3);
+              border-top: 4px solid white;
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              animation: spin 1s linear infinite;
+            }
+            .pre-loader {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 9999;
+              transition: opacity 0.3s;
+            }
+            .pre-loader--fade {
+              opacity: 0;
+            }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+          `
+        },
       ],
     },
   },
