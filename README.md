@@ -1,6 +1,4 @@
-
 > **Note**: This project is currently a work in progress. There are known issues with consistency, performance, and overall code organization that need to be addressed. The codebase is undergoing active development and cleanup.
-
 
 ## 5Stack Web
 
@@ -23,4 +21,3 @@ Start the development server on `http://localhost:3000`:
 ```bash
 yarn dev
 ```
-

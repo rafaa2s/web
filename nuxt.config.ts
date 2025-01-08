@@ -11,7 +11,7 @@ const url = `https://5stack.gg`;
 
 export default defineNuxtConfig({
   ssr: false,
-  plugins: ['~/plugins/preloader.client.ts'],
+  plugins: ["~/plugins/preloader.client.ts"],
 
   app: {
     head: {

@@ -387,30 +387,30 @@ import FiveStackToolTip from "./FiveStackToolTip.vue";
 
                     <FormControl>
                       <template v-if="form.values.lan">
-                          <Select
-                            v-model="lan_region"
-                            :options="regions"
-                            option-label="description"
-                            option-value="value"
-                            class="w-full"
-                          >
-                            <FormControl>
-                              <SelectTrigger>
-                                <SelectValue placeholder="Select LAN Region" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              <SelectGroup>
-                                <SelectItem
-                                  v-for="region in regions"
-                                  :key="region.value"
-                                  :value="region.value"
-                                >
-                                  {{ region.description }}
-                                </SelectItem>
-                              </SelectGroup>
-                            </SelectContent>
-                          </Select>
+                        <Select
+                          v-model="lan_region"
+                          :options="regions"
+                          option-label="description"
+                          option-value="value"
+                          class="w-full"
+                        >
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select LAN Region" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectGroup>
+                              <SelectItem
+                                v-for="region in regions"
+                                :key="region.value"
+                                :value="region.value"
+                              >
+                                {{ region.description }}
+                              </SelectItem>
+                            </SelectGroup>
+                          </SelectContent>
+                        </Select>
                       </template>
                       <Popover v-else>
                         <PopoverTrigger as-child>
@@ -736,9 +736,9 @@ export default {
         this.form.setFieldValue("map_pool_id", this.defaultMapPool.id);
       },
     },
-    lan_region : {
+    lan_region: {
       handler(lan_region) {
-        if(this.form.values.lan) {
+        if (this.form.values.lan) {
           this.form.setFieldValue("regions", [lan_region]);
         }
       },
@@ -747,7 +747,9 @@ export default {
       handler(lan) {
         let regions: string[] = [];
         if (lan && this.regions?.length > 0) {
-          const lanRegion = this.regions.find((region) => region.is_lan === true);
+          const lanRegion = this.regions.find(
+            (region) => region.is_lan === true,
+          );
           regions = [lanRegion?.value];
           this.lan_region = lanRegion?.value;
         }
