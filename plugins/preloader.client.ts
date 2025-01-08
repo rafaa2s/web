@@ -4,8 +4,7 @@ export default defineNuxtPlugin(() => {
     document.body.classList.add('pre-loader--fade')
 
     setTimeout(() => {
-      document.body.classList.remove('pre-loader')
-      document.body.classList.remove('pre-loader--fade')
+      document.body.classList.remove('pre-loader', 'pre-loader--fade')
     }, 300);
   });
 });
