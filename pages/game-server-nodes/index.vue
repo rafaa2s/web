@@ -67,6 +67,18 @@ import { Info } from "lucide-vue-next";
       </template>
     </PageHeading>
 
+    <Alert class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <Info class="h-4 w-4" />
+        <AlertTitle class="m-0">CS2 Version Information:</AlertTitle>
+      </div>
+      <AlertDescription class="m-0 flex items-center gap-2">
+        <span>Build ID: {{ csVersion }}</span>
+        <span class="text-muted-foreground">•</span>
+        <span>Last Updated: {{ csVersionLastUpdated?.toLocaleString() }}</span>
+      </AlertDescription>
+    </Alert>
+
     <Card class="p-4">
       <Table>
         <TableHeader>
@@ -174,6 +186,14 @@ export default {
   computed: {
     supportsGameServerNodes() {
       return useApplicationSettingsStore().supportsGameServerNodes;
+    },
+    csVersion() {
+      return useApplicationSettingsStore().csBuildInfo?.buildid;
+    },
+    csVersionLastUpdated() {
+      return new Date(
+        useApplicationSettingsStore().csBuildInfo?.timeupdated * 1000,
+      );
     },
   },
 };

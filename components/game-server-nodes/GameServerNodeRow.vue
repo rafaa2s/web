@@ -35,6 +35,11 @@ import { Trash2, RefreshCw } from "lucide-vue-next";
     <TableCell>
       <template v-if="gameServerNode.build_id">
         {{ gameServerNode.build_id }}
+        <template v-if="gameServerNode.build_id != csVersion">
+          <Button variant="destructive" size="sm" @click="updateCs"
+            >Update CS</Button
+          >
+        </template>
       </template>
       <template
         v-else-if="
@@ -227,6 +232,11 @@ export default {
           end_port_range,
         });
       },
+    },
+  },
+  computed: {
+    csVersion() {
+      return useApplicationSettingsStore().csBuildInfo?.buildid;
     },
   },
   methods: {
