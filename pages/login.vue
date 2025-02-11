@@ -16,8 +16,8 @@ definePageMeta({
         <CardDescription class="text-center">
           {{
             $t(
-              "login.sign_in",
-              "Sign in with your Steam account to get started",
+              "Torneios | Tuga Army",
+              "Entra com a tua conta steam para começar",
             )
           }}
         </CardDescription>
@@ -31,18 +31,6 @@ definePageMeta({
         />
       </CardContent>
     </Card>
-
-    <div class="mt-8">
-      <a
-        href="https://github.com/5stackgg/5stack-panel"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-      >
-        {{ $t("login.powered_by", "Powered by") }} 5stack.gg
-        <GithubLogoIcon class="w-4 h-4" />
-      </a>
-    </div>
   </div>
 </template>
 
