@@ -110,7 +110,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                   }"
                 >
                   <ShieldHalf />
-                  Teams
+                  Equipas
                 </NuxtLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
