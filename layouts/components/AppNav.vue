@@ -53,7 +53,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                   }"
                 >
                   <Play />
-                  Play
+                  Jogar
                 </NuxtLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -67,7 +67,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                   }"
                 >
                   <Calendar />
-                  Matches
+                  Jogos
                 </NuxtLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -81,7 +81,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                   }"
                 >
                   <TournamentBracket />
-                  Tournaments
+                  Torneios
                 </NuxtLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -96,7 +96,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                 >
                   <Users />
 
-                  Players
+                  Jogadores
                 </NuxtLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -130,7 +130,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                   }"
                 >
                   <Globe />
-                  Regions
+                  Regiões
                 </NuxtLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -168,7 +168,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                               isRouteActive('dedicated-servers'),
                           }"
                         >
-                          Dedicated Servers
+                          Servidores Dedicados
                         </NuxtLink>
                       </SidebarMenuSubButton>
                     </SidebarMenuSubItem>
@@ -185,7 +185,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                               isRouteActive('game-server-nodes'),
                           }"
                         >
-                          Game Server Nodes
+                          Nodes (Servidores)
                         </NuxtLink>
                       </SidebarMenuSubButton>
                     </SidebarMenuSubItem>
@@ -227,7 +227,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                       as-child
                     >
                       <NuxtLink :to="{ name: 'game-server-nodes' }">
-                        Game Server Nodes
+                        Nodes (Servidores)
                       </NuxtLink>
                     </DropdownMenuItem>
                   </DropdownMenuGroup>
@@ -258,7 +258,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                   }"
                 >
                   <LineChart />
-                  Metrics
+                  Métricas
                 </NuxtLink>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -360,7 +360,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                       }"
                     >
                       <BadgeCheck class="size-4" />
-                      My Account
+                      A minha conta
                     </NuxtLink>
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
@@ -371,7 +371,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                   @click="showLogoutModal = true"
                 >
                   <LogOut class="size-4" />
-                  Log out
+                  Sair
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
