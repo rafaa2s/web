@@ -280,6 +280,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
+        <SidebarMenu>
 
           <InstallPWA />
 
