@@ -27,7 +27,7 @@ import { PlusCircle } from "lucide-vue-next";
           @click="canCreateMatch && navigateTo('/matches/create')"
         >
           <PlusCircle class="w-4 h-4" />
-          <span class="hidden md:inline ml-2">Create Match</span>
+          <span class="hidden md:inline ml-2">Criar jogoh</span>
         </Button>
       </div>
     </template>

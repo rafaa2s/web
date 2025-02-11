@@ -12,7 +12,7 @@ import SimpleMatchDisplay from "~/components/SimpleMatchDisplay.vue";
     ></SimpleMatchDisplay>
     <template v-else>
       <div class="text-center w-full p-4">
-        <p class="text-muted-foreground">You don't have any recent matches.</p>
+        <p class="text-muted-foreground">Não tens jogos recentes.</p>
       </div>
     </template>
   </div>

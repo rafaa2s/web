@@ -14,7 +14,7 @@ import SimpleMatchDisplay from "./SimpleMatchDisplay.vue";
     <template v-else>
       <div class="text-center w-full p-4">
         <p class="text-muted-foreground">
-          You don't have any upcoming matches.
+          Não tens próximos jogos.
         </p>
       </div>
     </template>

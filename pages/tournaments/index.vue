@@ -76,7 +76,7 @@ import FiveStackToolTip from "~/components/FiveStackToolTip.vue";
             <template v-else>
               <div class="text-center w-full p-4">
                 <p class="text-muted-foreground">
-                  You don't have any recent tournaments.
+                   Não tens torneios recentes
                 </p>
               </div>
             </template>
