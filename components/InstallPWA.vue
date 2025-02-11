@@ -14,12 +14,6 @@ const { state, isMobile } = useSidebar();
       :class="{ 'mx-4': isMobile || state === 'expanded' }"
       v-if="canInstall"
     >
-      <SidebarMenuButton as-child tooltip="Install App">
-        <Button @click="installPWA" size="sm">
-          <MonitorDown />
-          <span v-if="isMobile || state === 'expanded'"> Install App </span>
-        </Button>
-      </SidebarMenuButton>
     </SidebarMenuItem>
 
     <Drawer
