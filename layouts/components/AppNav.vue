@@ -118,7 +118,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
         </SidebarGroup>
 
         <SidebarGroup v-if="me?.role === e_player_roles_enum.administrator">
-          <SidebarGroupLabel>Administration</SidebarGroupLabel>
+          <SidebarGroupLabel>Administração</SidebarGroupLabel>
 
           <SidebarMenu>
             <SidebarMenuItem tooltip="Regions">
@@ -145,7 +145,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
                 <CollapsibleTrigger as-child>
                   <SidebarMenuButton tooltip="Servers">
                     <Server />
-                    <span>Servers</span>
+                    <span>Servidores</span>
                     <ChevronRight
                       class="ml-auto transition-transform duration-200"
                       :class="{
@@ -280,36 +280,6 @@ import InstallPWA from "~/components/InstallPWA.vue";
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <SidebarMenu>
-          <SidebarMenuItem
-            v-if="me?.role === e_player_roles_enum.administrator"
-          >
-            <SidebarMenuButton as-child tooltip="Report an Issue">
-              <a
-                href="https://github.com/5stackgg/5stack-panel/issues"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <GithubLogoIcon class="w-5 h-5" />
-                Report an Issue
-              </a>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-
-          <SidebarMenuItem>
-            <SidebarMenuButton as-child tooltip="Join our Discord">
-              <a
-                :href="inviteLink"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <DiscordLogoIcon class="w-5 h-5" />
-                Join our Discord
-              </a>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
 
           <InstallPWA />
 
