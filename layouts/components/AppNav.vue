@@ -34,7 +34,7 @@ import InstallPWA from "~/components/InstallPWA.vue";
             <SidebarMenuButton size="lg" as-child>
               <nuxt-link to="/">
                 <NuxtImg class="rounded max-w-8" src="/favicon/64t.png" />
-                <span> TugaArmy </span>
+                <span> Tuga Army </span>
               </nuxt-link>
             </SidebarMenuButton>
           </SidebarMenuItem>
