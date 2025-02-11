@@ -21,13 +21,13 @@ export default defineNuxtConfig({
         { name: "robots", content: "index, follow" },
         { name: "title", content: title },
         { name: "description", content: description },
-        { name: "site_name", content: "5Stack" },
+        { name: "site_name", content: "Torneios | Tuga Army" },
 
         { property: "og:locale", content: "en" },
         { property: "og:type", content: "website" },
 
         { property: "og:title", content: title },
-        { property: "og:site_name", content: "5Stack" },
+        { property: "og:site_name", content: "Torneios | Tuga Army" },
 
         { property: "og:url", content: url },
         { property: "og:image", content: `${url}/_ipx/_/favicon/512.png` },

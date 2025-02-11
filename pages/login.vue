@@ -16,7 +16,7 @@ definePageMeta({
         <CardDescription class="text-center">
           {{
             $t(
-              "Torneios | Tuga Army",
+              "login.sign_in",
               "Entra com a tua conta steam para começar",
             )
           }}
